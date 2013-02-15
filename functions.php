@@ -74,11 +74,11 @@ function html5blank_nav()
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'header-menu',
-		'menu'            => '', 
-		'container'       => 'div', 
-		'container_class' => 'menu-{menu slug}-container', 
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu', 
+		'menu_class'      => 'menu',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -100,10 +100,10 @@ function html5blank_scripts()
         wp_deregister_script('jquery'); // Deregister WordPress jQuery
         wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array(), '1.9.0'); // Google CDN jQuery
         wp_enqueue_script('jquery'); // Enqueue it!
-        
+
         wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.1.1/conditionizr.js', array(), '2.1.1'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
-        
+
         wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js', array('jquery'), '2.6.2'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
@@ -126,7 +126,7 @@ function html5blank_styles()
 {
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
-    
+
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
@@ -137,7 +137,10 @@ function register_html5_menu()
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
         'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'extra-menu' => __('Extra Menu', 'html5blank'), // Extra Navigation if needed (duplicate as many as you need!)
+        'footer1' => __('Footer column 1', 'html5blank'), // Extra Navigation if needed (duplicate as many as you need!)
+        'footer2' => __('Footer column 2', 'html5blank'), // Extra Navigation if needed (duplicate as many as you need!)
+        'footer3' => __('Footer column 3', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -305,7 +308,7 @@ function html5blankcomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
-	
+
 	if ( 'div' == $args['style'] ) {
 		$tag = 'div';
 		$add_below = 'comment';

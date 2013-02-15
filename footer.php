@@ -1,37 +1,99 @@
-	<!-- Footer -->
-	<footer>
-		
-		<!-- Copyright -->
-		<p class="copyright">
-			&copy; <?php echo date("Y"); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?> 
-			<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-		</p>
-		<!-- /Copyright -->
-		
+<?php
+	$col1 = array(
+		'theme_location'  => '',
+		'menu'            => 'Footer 1',
+		'container'       => '',
+		'container_class' => '',
+		'container_id'    => '',
+		'menu_class'      => 'footer-menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+	);
+
+	$col2 = array(
+		'theme_location'  => '',
+		'menu'            => 'Footer 2',
+		'container'       => '',
+		'container_class' => '',
+		'container_id'    => '',
+		'menu_class'      => 'footer-menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+	);
+?>
+	<footer class="container">
+		<section class="row">
+			<article class="three">
+				<?php wp_nav_menu($col1); ?>
+			</article>
+			<article class="three">
+				<?php wp_nav_menu($col2); ?>
+			</article>
+			<article class="three">
+				<ul>
+					<li><a href="https://github.com/billpatrianakos/userbillofrights"><i class="icon-github-alt"></i> Source on Github</a></li>
+					<li><a href="http://www.mediatemple.net/#a_aid=4ef681de57d85"><i class="icon-cloud"></i> Hosting by MediaTemple</a></li>
+					<li>Like what we're doing? Tips are appreciated.
+						<br />
+						<iframe style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/billpatrianakos/widget.html" width="48pt" height="22pt"></iframe></li>
+				</ul>
+			</article>
+			<article class="three last">
+				<a href="<?php site_url('/'); ?>feed/atom" id="rss-callout">
+					<p>
+						<i class="icon-rss icon-large"></i>
+						<strong>Subscribe to the feed</strong>
+						<br />
+						Get notified of new services as they're added.
+					</p>
+				</a>
+			</article>
+		</section>
 	</footer>
-	<!-- /Footer -->
-	
-	</div>
-	<!-- /Wrapper -->
-	
-	<!-- jQuery CDN Failsafe to CloudFlare CDN -->
-	<script>window.jQuery || document.write('<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"><\/script>');</script>
-	
-	<!-- Google Analytics -->
+
+	<!-- Your JavaScript should be at the bottom (with some exceptions) -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="http://userbillofrights.org/wp-content/themes/ubr/js/libs/jquery1.8.2.min.js">\x3C/script>')</script>
+	<script src="<?php bloginfo('template_url'); ?>/js/plugins.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
+
 	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-38493313-1']);
-	  _gaq.push(['_setDomainName', 'userbillofrights.org']);
-	  _gaq.push(['_trackPageview']);
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-38493313-1']);
+		_gaq.push(['_setDomainName', 'userbillofrights.org']);
+		_gaq.push(['_trackPageview']);
 
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 	</script>
-	
-	<?php wp_footer(); ?>
 
+	<!--Promp old IE users to install Chrome Frame. Remove to support IE6 -->
+	<!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    <?php wp_footer(); ?>
 </body>
 </html>

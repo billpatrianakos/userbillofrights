@@ -16,6 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?v=2" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic|Arvo:400,700' rel='stylesheet' type='text/css'>
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/respond.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
@@ -35,9 +36,9 @@
 	<header class="container">
 		<section class="row">
 			<article class="five">
-				<h1 class="logo">UBR <span class="subtitle">The Internet User's Bill of Rights</span></h1>
+				<a href="<?php site_url('/'); ?>" class="logo">UBR <span class="subtitle">The Internet User's Bill of Rights</span></a>
 			</article>
-			<nav class="seven">
+			<nav class="seven last">
 				<?php html5blank_nav(); ?>
 			</nav>
 		</section>
