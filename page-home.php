@@ -9,7 +9,7 @@
 					These days, with the abundance of free websites, apps, and services out there it’s tough for users to know who to trust and just as hard for the services we rely on to monetize their projects. The Internet User’s Bill of Rights is a project aimed at curbing users’ sense of entitlement while holding service providers to a set of standards so that both parties know the minimum to expect from each other.
 				</p>
 				<p>
-					<a class="button gradient" href="">Know your rights!</a>
+					<a class="button gradient" href="<?php echo home_url('/rights') ?>">Know your rights!</a>
 				</p>
 			</article>
 			<article class="six last hands"></article>

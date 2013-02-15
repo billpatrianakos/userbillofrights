@@ -47,7 +47,7 @@
 			</article>
 			<article class="three">
 				<ul>
-					<li><a href="https://github.com/billpatrianakos/userbillofrights"><i class="icon-github-alt"></i> Source on Github</a></li>
+					<li><a href="https://github.com/billpatrianakos/ubr-public"><i class="icon-github-alt"></i> Source on Github</a></li>
 					<li><a href="http://www.mediatemple.net/#a_aid=4ef681de57d85"><i class="icon-cloud"></i> Hosting by MediaTemple</a></li>
 					<li>Like what we're doing? Tips are appreciated.
 						<br />
@@ -69,16 +69,13 @@
 			<article class="twelve centered-text">
 				<p>
 					<small>
-						Copyright &copy; <?php echo date('Y'); ?> UBR | Made by <a href="http://billpatrianakos.com">Bill Patrianakos</a>, inspired by <a href="http://news.ycombinator.com/item?id=5220072">Hacker News</a>
+						Copyright &copy; <?php echo date('Y'); ?> UBR | Made by <a href="http://billpatrianakos.com">Bill Patrianakos</a>, inspired by <a href="http://news.ycombinator.com/item?id=5220072">Hacker News</a> | <a href="https://github.com/billpatrianakos/userbillofrights">Theme source here</a>
 					</small>
 				</p>
 			</article>
 		</section>
 	</footer>
 
-	<!-- Your JavaScript should be at the bottom (with some exceptions) -->
-
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="http://userbillofrights.org/wp-content/themes/ubr/js/libs/jquery1.8.2.min.js">\x3C/script>')</script>
 	<script src="<?php bloginfo('template_url'); ?>/js/plugins.js"></script>
