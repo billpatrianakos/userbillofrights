@@ -36,7 +36,7 @@
 	<header class="container">
 		<section class="row">
 			<article class="five">
-				<a href="<?php site_url('/'); ?>" class="logo">UBR <span class="subtitle">The Internet User's Bill of Rights</span></a>
+				<a href="<?php home_url('/'); ?>" class="logo">UBR <span class="subtitle">The Internet User's Bill of Rights</span></a>
 			</article>
 			<nav class="seven last">
 				<?php html5blank_nav(); ?>

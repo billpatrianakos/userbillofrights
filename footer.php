@@ -65,6 +65,15 @@
 				</a>
 			</article>
 		</section>
+		<section class="row">
+			<article class="twelve centered-text">
+				<p>
+					<small>
+						Copyright &copy; <?php echo date('Y'); ?> UBR | Made by <a href="http://billpatrianakos.com">Bill Patrianakos</a>, inspired by <a href="http://news.ycombinator.com/item?id=5220072">Hacker News</a>
+					</small>
+				</p>
+			</article>
+		</section>
 	</footer>
 
 	<!-- Your JavaScript should be at the bottom (with some exceptions) -->

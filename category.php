@@ -1,21 +1,25 @@
 <?php get_header(); ?>
-	
-	<!-- Section -->
-	<section>
-	
-		<h1><?php _e( 'Categories for', 'html5blank' ); the_category(); ?></h1>
-	
-		<?php get_template_part('loop'); ?>
-		
-		<!-- Pagination -->
-		<div id="pagination">
-			<?php html5wp_pagination(); ?>
-		</div>
-		<!-- /Pagination -->
-	
+	<section class="container page-heading">
+		<section class="row">
+			<article class="twelve">
+				<p>
+					<?php wp_title(); ?>
+				</p>
+			</article>
+		</section>
 	</section>
-	<!-- /Section -->
-	
-<?php get_sidebar(); ?>
+	<section id="main-container" class="container">
+		<section class="row">
+			<article class="eight">
+				<?php get_template_part('loop'); ?>
+				<div id="pagination">
+					<?php html5wp_pagination(); ?>
+				</div>
+			</article>
+			<aside class="four last">
+				<?php get_sidebar(); ?>
+			</aside>
+		</section>
+	</section>
 
 <?php get_footer(); ?>
